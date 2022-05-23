@@ -26,26 +26,26 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!'''
 
-'''
 # 1. liczba powtórzeń
-print('\n')
+print('................')
 print(f'Ilośc powtórzeń słowa better', txt.count('better'))
 
 # 2. Usuwanie gwiazdki
-print('\n')
+print('................')
 print('***USUWANIE GWIAZDKI***')
 print(txt.replace('*', ''))
 
 # 3.  Zamiana wyrazów
-print('\n')
+print('................')
 print('***ZAMIANA WYRAZÓW***')
 print(txt.replace('explain', 'understand', 1))
 
 # 4. myślniki za spacje
-print('\n')
+print('................')
 print('***MYŚLNIKI ZA SPACJE***')
 print(txt.replace(' ', '-'))
-'''
+
 # 5. dzielenie tekstu (???????????)
+print('................')
 txt2 = txt.rpartition('.')
 print(txt2)

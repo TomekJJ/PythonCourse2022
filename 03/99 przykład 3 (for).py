@@ -1,12 +1,12 @@
 txt = "abrakadabra"
 
-for letter in txt:
-    print('-', letter)
+for a in txt:
+    print('-', a)
 
 print('-------------------')
 names = ["ada", "julia", "ruby"]
-for i in names:
-    print("hello",i)
+for k in names:
+    print("hello",k)
 
 print('-------------------')
 for i in range(10):
@@ -35,3 +35,4 @@ magic = "hokuspokus"
 for num in range (2, 10, 2):
     pa = pa + str(num) + magic[num]
     print(pa)
+

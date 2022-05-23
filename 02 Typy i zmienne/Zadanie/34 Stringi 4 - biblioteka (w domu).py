@@ -30,4 +30,5 @@ print('\n')
 book = tytul_mod + ' ' + nazwisko_mod + ' ' + strony
 
 print(book)
-print(f'liczba znaków w opisie wynosi ', len(book))
+print(f'liczba znaków w opisie wynosi {len(book)} stron')
+print('liczba znaków w opisie wynosi ', len(book))
