@@ -25,7 +25,7 @@ for i in num:
 if not flag:
     print('nie ma takiej liczby')
 
-# sposób 4
+# sposób 3
 print('...')
 if num in krotka:
         print('znalazłem, pod indeksem:', krotka.index(num))

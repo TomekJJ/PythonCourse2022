@@ -8,15 +8,15 @@ print(type(lista1))
 print('Czy pierwszy i ostatni element są takie same?', lista1[0] == lista1[-1])
 
 # innym sposobem to samo...
-print(...........)
+print("...........")
 
 lista_10 = []
 new_input = int(input("Wprowadć 10 numerów"))
 
 for number in range(0, 10):
     new_number = int(input())
-    list_10.append(new_number)
+    lista_10.append(new_number)
 
-print(list_10)
-print(list_10[0] == list_10[9])
+print(lista_10)
+print(lista_10[0] == lista_10[9])
 
