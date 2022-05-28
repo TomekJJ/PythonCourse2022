@@ -1,6 +1,6 @@
 import random
 
-ZBIOR_HASEL = ["tommek", "mmichał", "ania"]
+ZBIOR_HASEL = ["tommek", "mmichal", "ania"]
 
 
 def losuj_haslo():
@@ -10,14 +10,13 @@ def losuj_haslo():
 
 def print_emtpy_pass(pswrd):
     pswrd_len = len(pswrd)
-    empty_pswrd = pswrd_len * ' _ '
+    empty_pswrd = pswrd_len * '_'
     print(f'**** Hasło składa się z {pswrd_len} liter ****')
-    print(empty_pswrd)
-    return empty_pswrd
+    print(list(empty_pswrd))
+    return list(empty_pswrd)
 
 def find_letter(pswrd, ingame_pswrd):
-
-    pswrd = tuple(pswrd)
+    pswrd = list(pswrd)
     letter = input("Zgadnij literę -->")
 
     if letter in pswrd:
@@ -28,17 +27,24 @@ def find_letter(pswrd, ingame_pswrd):
         return ingame_pswrd
     else:
         print("W haśle nie ma takiej litery")
+        print(ingame_pswrd)
+        return ingame_pswrd
 
-#def main():
-empty_pswrd = []
-pswrd = losuj_haslo()
+def main():
 
-print_emtpy_pass(pswrd)
+    pswrd = losuj_haslo()
 
-ingame_pswrd = empty_pswrd
+    ingame_pswrd = print_emtpy_pass(pswrd)
 
-for proba in range (1, 5):
-    print(f'***** Próba {proba} *****')
-    find_letter(pswrd, ingame_pswrd)
+    for proba in range (1, 7):
+        print(f'***** Próba {proba} *****')
+        if ingame_pswrd == list(pswrd):
+            print("Brawo wygrałeś")
+            break
+        else:
+            find_letter(pswrd, ingame_pswrd)
 
-#main()
+        if proba == 6:
+            print("Przegrałeś, spróbuj jeszcze raz")
+            break
+main()
