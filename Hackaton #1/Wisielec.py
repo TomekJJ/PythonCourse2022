@@ -12,6 +12,7 @@ def losuj_haslo():
 def print_emtpy_pass(pswrd):
     pswrd_len = len(pswrd)
     empty_pswrd = pswrd_len * '_'
+    print()
     print(f'**** Hasło składa się z {pswrd_len} liter ****')
     print(list(empty_pswrd))
     return list(empty_pswrd)
@@ -25,6 +26,7 @@ def find_letter(pswrd, ingame_pswrd):
         for i, v in enumerate(pswrd):  # i to indeks, v to wartość
             if letter == v:
                 ingame_pswrd[i] = letter
+        print("Podana litera znajduje się w haśle:")
         print(ingame_pswrd)
         return ingame_pswrd
     else:
@@ -52,6 +54,7 @@ def main():
     ingame_pswrd = print_emtpy_pass(pswrd)
 
     for proba in range(1, n):
+        print()
         print(f'***** Próba {proba} *****')
         choice = input("Czy chcesz odgadnąć całe hasło (t/n)? -->")
 
@@ -60,19 +63,24 @@ def main():
             if guess == True:
                 break
             elif guess == False and proba == n-1:
+                print()
                 print("Przegrałeś, spróbuj jeszcze raz!")
+                print(f'Odgadywanym słowem było "{pswrd}"')
                 break
 
-        elif choice == "n":
+        if choice == "n":
             if ingame_pswrd == list(pswrd):
                 print("Brawo wygrałeś")
                 break
             else:
                 find_letter(pswrd, ingame_pswrd)
+        ## elif: jak kontrolować błędną odpowiedć użytkowniką wśrodku pętli for ????
 
 
-        if proba == n:
+        if proba == n - 1:
+            print()
             print("Przegrałeś, spróbuj jeszcze raz!")
+            print(f'Odgadywanym słowem było "{pswrd}"')
             break
 
 
