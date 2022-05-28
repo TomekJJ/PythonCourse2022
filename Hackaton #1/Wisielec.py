@@ -1,6 +1,6 @@
 import random
 
-ZBIOR_HASEL = ["tommek", "mmichal", "ania", "oola", "hhenio", "kaazio"]
+ZBIOR_HASEL = ["Tommek", "mmichal", "Ania", "oola", "hhenio", "kaazio"]
 
 
 def losuj_haslo():
@@ -35,34 +35,44 @@ def find_letter(pswrd, ingame_pswrd):
 
 def guess_full_pswrd(pswrd):
     user_guess = input("Podaj hasło -->")
+
     if user_guess == pswrd:
         print("**** Brawo wygrałeś !!! ****")
     else:
         print("Podane hasło jest błędne")
 
+    return user_guess == pswrd
+
 
 def main():
-    n = int(input("Wybierz stopień trudności (liczba prób od 3 do 10) --> "))
+    n = int(input("Wybierz stopień trudności (liczba prób od 3 do 10) --> ")) + 1
 
     pswrd = losuj_haslo()
-
 
     ingame_pswrd = print_emtpy_pass(pswrd)
 
     for proba in range(1, n):
         print(f'***** Próba {proba} *****')
         choice = input("Czy chcesz odgadnąć całe hasło (t/n)? -->")
-        if choice == "t":
-            guess_full_pswrd(pswrd)
 
-        if ingame_pswrd == list(pswrd):
-            print("Brawo wygrałeś")
-            break
-        else:
-            find_letter(pswrd, ingame_pswrd)
+        if choice == "t":
+            guess = guess_full_pswrd(pswrd)
+            if guess == True:
+                break
+            elif guess == False and proba == n-1:
+                print("Przegrałeś, spróbuj jeszcze raz!")
+                break
+
+        elif choice == "n":
+            if ingame_pswrd == list(pswrd):
+                print("Brawo wygrałeś")
+                break
+            else:
+                find_letter(pswrd, ingame_pswrd)
+
 
         if proba == n:
-            print("Przegrałeś, spróbuj jeszcze raz")
+            print("Przegrałeś, spróbuj jeszcze raz!")
             break
 
 
