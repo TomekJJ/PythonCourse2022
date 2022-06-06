@@ -4,6 +4,10 @@ def is_even(num):
     else:
         print("podana liczba jest nieparzysta")
 
-num1 = int(input("podaj liczbe -> "))
 
-is_even(num1)
+def main():
+    num1 = int(input("podaj liczbe -> "))
+    is_even(num1)
+
+
+main()
