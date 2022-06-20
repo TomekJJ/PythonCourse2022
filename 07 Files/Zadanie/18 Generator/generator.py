@@ -30,8 +30,8 @@ def main():
     phrase = get_random(prefixy) + " " + get_random(middle1) + " " + get_random(middle2) + " " + get_random(sufixy)
     print(phrase)
 
-    # print(get_prefix(prefixy))
-    # print(get_middle1(middle1))
+    print(prefixy)
+    print(middle1)
 
 
 main()
