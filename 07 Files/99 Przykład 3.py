@@ -1,4 +1,4 @@
-sweets_list = ['chocolate', 'lollipop', 'cookie', 'candy']
+sweets_list = ['chocolate', 'lollipop','cookie', 'candy']
 
 
 # # z writelines (wymaga dodania \n po każdym elemencie listy)
@@ -10,6 +10,6 @@ sweets_list = ['chocolate', 'lollipop', 'cookie', 'candy']
 #     for i in sweets_list:
 #         f.write(i + '\n')
 
-# z joinem
+# # z joinem
 with open('save.txt', 'w') as f:
     f.write('\n'.join(sweets_list))

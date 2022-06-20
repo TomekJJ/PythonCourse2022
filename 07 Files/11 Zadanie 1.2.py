@@ -13,7 +13,7 @@ def get_quote(filename):
 
 def show_quote(quote):
     quote = quote.strip('\n')
-    quote = quote.split('-') # tcyta do myślinka
+    quote = quote.split('-') # cytat do myślinka
 
     lenght = len(quote[0]) + 20
 

@@ -25,6 +25,6 @@ with open('Pan_tadeusz2.txt') as fopen:
     print('.........................')
     content = fopen.readlines()
 
-   print(content)
-   for l in content:
+print(content)
+for l in content:
      print(l)
