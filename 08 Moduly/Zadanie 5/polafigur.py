@@ -1,8 +1,8 @@
 # Stwórz moduł obliczający pola różnych figur.
 # W nowym pliku utwórz skrypt, który na podstawie podanych składowych kształtów pomieszczeń oraz ich wymiarów zwraca powierzchnię budynku.
 
-def oblicz_kwadrat(a, b):
-    pole = a * b
+def oblicz_kwadrat(a):
+    pole = a * a
 
     return pole
 
