@@ -11,7 +11,7 @@ def read():
     return content
 
 def save():
-    with open(f'{type}.txt', 'w')
+    pass
 
 
 def is_card(number):
