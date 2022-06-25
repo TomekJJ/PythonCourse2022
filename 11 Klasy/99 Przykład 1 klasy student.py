@@ -25,7 +25,8 @@ class Student:
     def email(self):
       return f'{self.first}.{self.last}@{self.university_code}.com'.lower()
 
-print('heloł')
+    def hello(self):
+        print('HELOŁ')
 
 anna = Student('Anna', "Kowalska", 23)
 piotr = Student('Piotr', "Nowak", 22)
@@ -40,4 +41,11 @@ print(Student.__dict__) # jakie pola nalezą do klasy student
 print('....................')
 anna.last = "Smith"
 print(anna.last, anna.first, anna.email())
+
+# wywoływanie metody na dwa sposoby
+print('....................')
+anna.hello()
+Student.hello(anna)
+
+print(Student.email(anna))
 
